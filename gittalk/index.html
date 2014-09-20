@@ -64,33 +64,275 @@ not know the answer * Enable folks to continue afterward on their own.
     </aside>
 </section>
 
-    <section>
-        <h2>@YesCT</h2>
-        <h3>
-
-        <p>Cathy Theys </p>
-
-        <p>BlackMesh</p>
-        </h3>
-        <aside class="notes">
-        </aside>
-    </section>
-
 <section>
-<section>
-    <h3>Resources</h3>
-    <h3><ul>
-    <li>tinyurl.com/fvgit</li>
-    </ul>
+    <h2>@YesCT</h2>
+    <h3>
+
+    <p>Cathy Theys </p>
+
+    <p>BlackMesh</p>
     </h3>
+    <p>Thanks Fureigh.</p>
+    <aside class="notes">
+    </aside>
 </section>
+
+<section>
+    <h3>What are we going to discuss?</h3>
+    <ul>
+    <li>What version control is and why we care</li>
+    <li>Setting up and getting started with Git</li>
+    <li>Fundamental commands</li>
+    <li>How to use Git to experiment safely</li>
+    <li>How to see who did what when</li>
+    <li>Simple daily workflow (public repos)</li>
+    </ul>
+</section>
+
+<section>
+    <h3>What we’re not doing</h3>
+    <ul>
+    <li>GitHub (github.com) – http://try.github.io</li>
+    <li>This is by no means an exhaustive guide to Git. See “Resources.”</li>
+    <li>This will be less fun without a computer, but you can still learn!</li>
+    </ul>
+</section>
+
+<section>
+    <h3>What is version control?</h3>
+    <p>(save points for your work.)
+    <br>(not only for code.)
+</section>
+
+<section>
+    <h3>Why use version control?</h3>
+    (tl;dr: to reduce suffering.)
+</section>
+
+<section>
+    ￼Why Git in particular?
+    • Cheap local branching • Multiple workflows
+    • Fast
+</section>
+
+<section>
+    ￼Let’s try it out!
+</section>
+
+<section>
+    ￼Installing Git
+    • Linux: Search for ‘git’ or ‘git-core’ 
+    sudo yum install git / sudo apt-get install git-core 
+    • Mac: 
+    Download from git-scm.com  Applications -> Utilities -> Terminal 
+    • Windows: 
+    Download from git-scm.com 
+    Start -> Programs -> Git -> Git Bash
+    ￼10￼
+</section>
+
+<section>
+    ￼Introduce yourself to Git
+    • Tell it your name: 
+    git config --global user.name “Your Name” 
+    • And your email address:  git config --global user.email
+    “your@email.com” 
+    • And avoid unnecessary hassle:  git config --global core.safecrlf true
+</section>
+
+<section>
+    ￼Starting a new project
+    • Make a new project directory:  ! mkdir myproject 
+    cd myproject
+    • Tell Git to start paying attention to your project: 
+    ! git init!
+    • Check what you’ve done.  git status
+</section>
+
+<section>
+    ￼Adding and committing • Make a new file: 
+    touch newfile.txt
+    • Add it: 
+    git add newfile.txt
+    • And make an initial commit:  ! git commit -m “Initial  
+    commit.”
+    • See what you’ve done:  git log
+</section>
+
+<section>
+    ￼Commit early and often!
+    • The smaller your commits, the easier it’ll be for you to go back and see what you’ve done. 
+    • ...or undo changes that caused damage.
+</section>
+
+<section>
+    ￼Fear of (mis)commitment
+    • To edit your last commit message
+    (for the perfectionists among us): 
+     
+    git commit --amend -m “You see,   what I really meant to say was   this.”
+</section>
+
+<section>
+    ￼Checking what’s different • Make a change to newfile.txt. 
+    vi newfile.txt
+    • See which files have been changed:  git status
+    • See more precisely what’s changed: 
+    git diff   
+    (specific file, patch creation)
+</section>
+
+<section>
+    ￼Hey, speaking of diff...
+    • It’s also what we use to make patches!
+    • Make another change:  vi newfile.txt
+    • See what’s changed:  git diff
+    • Make it into a patch: 
+    git diff newfile.txt > made- 
+    everything-more-awesome.patch
+</section>
+
+<section>
+    ￼Keep the crud out
+    • Your .gitignore file keeps Git from
+    getting cluttered. 
+    • Create it in the root directory of your Git repository.
+</section>
+
+<section>
+    ￼moar .gitignore
+    • Let’s make a .gitignore file. 
+    touch secret_passwords.txt 
+    vi .gitignore 
+    .secret_passwords.txt 
+     
+    (Note: case-sensitive!)
+    • What else might we .gitignore?  sites/default/settings.php  *.DS_Store
+    • git add .gitignore
+</section>
+
+<section>
+    ￼Using Git to experiment safely • Make a new branch and switch to it: 
+    git checkout -b 41014-snazzytheme 
+    • View current branches:  git branch 
+    (Asterisk tells you where you are.) 
+    • (If you wanted to switch back to master:)  git checkout master
+</section>
+
+<section>
+    ￼Wash, rinse, repeat.
+    • Make edits.
+    • Check status.
+    • Diff to check what’s changed.
+    • Add files if necessary.
+    • Commit changes. They’ll go to the 41014-snazzytheme branch, NOT to master.
+</section>
+
+<section>
+    ￼Putting it back on master • First, switch back to master: 
+    git checkout master
+    • You can verify that:  git branch
+    • Merge the other branch:  git merge snazzytheme  (No squashing!)
+    • You can see the commit in the log:  git log -1 
+    (git log -s)
+</section>
+
+<section>
+    ￼Deleting branches • Delete the ‘snazzytheme’ branch: 
+    git branch -d snazzytheme 
+    • You can verify that:  git branch
+</section>
+
+<section>
+    ￼Tagging
+    • If you want to mark a commit as
+    special:   
+    git tag -a v1.0 -m “Initial launch!” 
+    • Tell me all about that, Git.   
+    git show v1.0
+</section>
+
+<section>
+    ￼But wait! Something’s gone wrong!
+</section>
+
+<section>
+    ￼Turning back (recent) time
+    • Say you delete a file: 
+    git rm newfile.txt
+    • J/k! Forget everything since my last commit! 
+    git reset --hard
+    • Check that all’s well:  git status
+    • For individual files: 
+    git checkout yesterday.txt
+</section>
+
+<section>
+    ￼Disaster recovery
+    • Whathappened?Whendoyouhypothesize was last-known-good? 
+    git log 
+    git blame – who did this?
+    • First5charactersofeachlongstringarea commit ID.
+    • Toviewchangesbetweensecondandthird commits: 
+    git diff 22222:33333
+    • Torevert: 
+    git revert HEAD <- reverts most recent  or: git checkout 22222 filename.txt
+</section>
+
+<section>
+    ￼Simple daily workflow
+    • (git clone)
+    • git checkout master
+    • git pull
+    • git checkout -b issue-branch 
+    Creates and switches you into a branch.
+    • git status (as you’re going along)
+    • git add [filename]
+    • git diff
+    • git commit -m “Detailed commit message.”
+    • git checkout master
+    • git merge issue-branch
+    • git push; git branch -d issue-branch
+    ￼http://nakedstartup.com/2010/04/simple-daily-git-workflow/
+    ￼
+</section>
+
+<section>
+    ￼Git on drupal.org
+    • Eachproject(module,theme,etc.)getsits own repository.
+    • Whogetscommitaccess?Project administrator and people to whom they grant permission.
+    • Ifyou’reaprojectcreator,followthesteps on the Version Control tab of your project’s page.
+    • Thatpagealsoletsanyoneclonethegitrepo. Perfect for making patches.
+    • drupal.org/documentation/git
+</section>
+
+<section>
+    ￼Gittin’ fancy • gitlog—name-only 
+    • gitadd-p !
+    • gitmerge--squash 
+    • (funwithgitconfig:colordiffingandmore)
+</section>
+
+<section>
+    ￼Resources
+    • Drupal-specific:drupal.org/documentation/
+    git 
+    Includes GUI recommendations.
+    • gitready.com–greatforquickanswers
+    • gitimmersion.com–beautiful
+    • openhatch.org/missions/git–practice!
+    • try.github.com
+    • git-scm.com
+</section>
+
 <section>
     <h3>Action</h3>
     <h4><ul>
-        <li>Sprint!</li>
+        <h4>Now come help at Sunday’s sprint!</h4>
     </ul></h4>
 
 </section>
+
 <section>
     <h3>Give feedback please</h3>
     <h3>Questions?</h3>
