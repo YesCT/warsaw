@@ -110,219 +110,269 @@ not know the answer * Enable folks to continue afterward on their own.
 </section>
 
 <section>
-    ￼Why Git in particular?
-    • Cheap local branching • Multiple workflows
-    • Fast
+    <h3>Why Git in particular?</h3>
+    <ul>
+    <li>Cheap local branching • Multiple workflows</li>
+    <li>Fast</li>
+    </ul>
 </section>
 
 <section>
-    ￼Let’s try it out!
+    ￼<h3>Let’s try it out!</h3>
 </section>
 
 <section>
-    ￼Installing Git
-    • Linux: Search for ‘git’ or ‘git-core’ 
-    sudo yum install git / sudo apt-get install git-core 
-    • Mac: 
-    Download from git-scm.com  Applications -> Utilities -> Terminal 
-    • Windows: 
-    Download from git-scm.com 
-    Start -> Programs -> Git -> Git Bash
-    ￼10￼
+    <h3>Installing Git</h3>
+    <ul>
+    <li>Linux: Search for ‘git’ or ‘git-core’ 
+    <br>sudo yum install git / sudo apt-get install git-core </li>
+    <li>Mac: 
+    <br>Download from git-scm.com  Applications -> Utilities -> Terminal </li>
+    <li>Windows: 
+    <br>Download from git-scm.com 
+    <br>Start -> Programs -> Git -> Git Bash</li>
+    </ul>
 </section>
 
 <section>
-    ￼Introduce yourself to Git
-    • Tell it your name: 
-    git config --global user.name “Your Name” 
-    • And your email address:  git config --global user.email
-    “your@email.com” 
-    • And avoid unnecessary hassle:  git config --global core.safecrlf true
+    <h3>Introduce yourself to Git</h3>
+    <ul>
+    <li>Tell it your name: 
+    <br>git config --global user.name “Your Name” </li>
+    <li>And your email address: 
+    <br>git config --global user.email your@email.com” </li>
+    <li>And avoid unnecessary hassle:
+    <br>git config --global core.safecrlf true</li>
+    </ul>
 </section>
 
 <section>
-    ￼Starting a new project
-    • Make a new project directory:  ! mkdir myproject 
-    cd myproject
-    • Tell Git to start paying attention to your project: 
-    ! git init!
-    • Check what you’ve done.  git status
+    <h3>Starting a new project</h3>
+    <ul>
+    <li>Make a new project directory:
+    <br>mkdir myproject 
+    <br>cd myproject</li>
+    <li>Tell Git to start paying attention to your project: 
+    <br>git init</li>
+    <li>Check what you’ve done.
+    <br>git status</li>
+    </ul>
 </section>
 
 <section>
-    ￼Adding and committing • Make a new file: 
-    touch newfile.txt
-    • Add it: 
-    git add newfile.txt
-    • And make an initial commit:  ! git commit -m “Initial  
-    commit.”
-    • See what you’ve done:  git log
+    <h3>Adding and committing</h3>
+    <ul>
+    <li>Make a new file: 
+    <br>touch newfile.txt</li>
+    <li>Add it: 
+    <br>git add newfile.txt</li>
+    <li>And make an initial commit:
+    <br>`git commit -m “Initial   commit.”</li>
+    <li>See what you’ve done:
+    <br>git log</li>
+    </ul>
 </section>
 
 <section>
-    ￼Commit early and often!
-    • The smaller your commits, the easier it’ll be for you to go back and see what you’ve done. 
-    • ...or undo changes that caused damage.
+    <h3>Commit early and often</h3>
+    <ul>
+    <li>The smaller your commits, the easier it’ll be for you to go back and see what you’ve done. </li>
+    <li>...or undo changes that caused damage.</li>
+    </ul>
 </section>
 
 <section>
-    ￼Fear of (mis)commitment
-    • To edit your last commit message
-    (for the perfectionists among us): 
+    <h3>Fear of (mis)commitment</h3>
+    <ul>
+    <li>To edit your last commit message
+    <br>(for the perfectionists among us): 
      
-    git commit --amend -m “You see,   what I really meant to say was   this.”
+    <br>git commit --amend -m “You see,   what I really meant to say was   this.”</li>
+    </ul>
 </section>
 
 <section>
-    ￼Checking what’s different • Make a change to newfile.txt. 
-    vi newfile.txt
-    • See which files have been changed:  git status
-    • See more precisely what’s changed: 
-    git diff   
-    (specific file, patch creation)
+    <h3>Checking what’s different</h3>
+    <ul>
+    <li>Make a change to newfile.txt. 
+    <br>vi newfile.txt</li>
+    <li>See which files have been changed: 
+    <br>git status</li>
+    <li>See more precisely what’s changed: 
+    <br>git diff </li>
+    <br>(specific file, patch creation)
+    </ul>
 </section>
 
 <section>
-    ￼Hey, speaking of diff...
-    • It’s also what we use to make patches!
-    • Make another change:  vi newfile.txt
-    • See what’s changed:  git diff
-    • Make it into a patch: 
-    git diff newfile.txt > made- 
-    everything-more-awesome.patch
+    <h3>Hey, speaking of diff...</h3>
+    <ul>
+    <li>It’s also what we use to make patches!</li>
+    <li>Make another change:
+    <br>vi newfile.txt</li>
+    <li>See what’s changed: 
+    <br>git diff</li>
+    <li>Make it into a patch: 
+    <br>git diff newfile.txt > made- everything-more-awesome.patch</li>
+    </ul>
 </section>
 
 <section>
-    ￼Keep the crud out
-    • Your .gitignore file keeps Git from
-    getting cluttered. 
-    • Create it in the root directory of your Git repository.
+    <h3>Keep the crud out</h3>
+    <ul>
+    <li>Your .gitignore file keeps Git from getting cluttered. </li>
+    <li>Create it in the root directory of your Git repository.</li>
+    </ul>
 </section>
 
 <section>
-    ￼moar .gitignore
-    • Let’s make a .gitignore file. 
-    touch secret_passwords.txt 
-    vi .gitignore 
-    .secret_passwords.txt 
+    <h3>moar .gitignore</h3>
+    <ul>
+    <li>Let’s make a .gitignore file. 
+    <br>touch secret_passwords.txt 
+    <br>vi .gitignore 
+    <br>.secret_passwords.txt 
      
-    (Note: case-sensitive!)
-    • What else might we .gitignore?  sites/default/settings.php  *.DS_Store
-    • git add .gitignore
+    <br>(Note: case-sensitive!)</li>
+    <li>What else might we .gitignore?  sites/default/settings.php  *.DS_Store</li>
+    <li>git add .gitignore</li>
+    </ul>
 </section>
 
 <section>
-    ￼Using Git to experiment safely • Make a new branch and switch to it: 
-    git checkout -b 41014-snazzytheme 
-    • View current branches:  git branch 
-    (Asterisk tells you where you are.) 
-    • (If you wanted to switch back to master:)  git checkout master
+    <h3>Using Git to experiment safely</h3>
+    <ul>
+    <li>Make a new branch and switch to it: 
+    <br>git checkout -b 41014-snazzytheme </li>
+    <li>View current branches: <br>git branch  <br>(Asterisk tells you where you are.) </li> <li>(If you wanted to switch back to master:)  <br>git checkout master</li> </ul> </section>
+<section>
+    <h3>Wash, rinse, repeat.</h3>
+    <ul>
+    <li>Make edits.</li>
+    <li>Check status.</li>
+    <li>Diff to check what’s changed.</li>
+    <li>Add files if necessary.</li>
+    <li>Commit changes. They’ll go to the 41014-snazzytheme branch, NOT to master.</li>
+    </ul>
 </section>
 
 <section>
-    ￼Wash, rinse, repeat.
-    • Make edits.
-    • Check status.
-    • Diff to check what’s changed.
-    • Add files if necessary.
-    • Commit changes. They’ll go to the 41014-snazzytheme branch, NOT to master.
+    <h3>Putting it back on master</h3>
+    <ul>
+    <li>First, switch back to master
+    <br>git checkout master</li>
+    <li>You can verify that:
+    <br>git branch</li>
+    <li>Merge the other branch: 
+    <br>git merge snazzytheme 
+    <br>(No squashing!)</li>
+    <li>You can see the commit in the log:
+    <br>git log -1 
+    <br>(git log -s)</li>
 </section>
 
 <section>
-    ￼Putting it back on master • First, switch back to master: 
-    git checkout master
-    • You can verify that:  git branch
-    • Merge the other branch:  git merge snazzytheme  (No squashing!)
-    • You can see the commit in the log:  git log -1 
-    (git log -s)
+    <h3>Deleting branches</h3>
+    <ul>
+    <li>Delete the ‘snazzytheme’ branch: 
+    <br>git branch -d snazzytheme </li>
+    <li>You can verify that:
+    <br>git branch</li>
+    </ul>
 </section>
 
 <section>
-    ￼Deleting branches • Delete the ‘snazzytheme’ branch: 
-    git branch -d snazzytheme 
-    • You can verify that:  git branch
+    <h3>Tagging</h3>
+    <ul>
+    <li>If you want to mark a commit as special:   
+    <br>git tag -a v1.0 -m “Initial launch!” </li>
+    <li>Tell me all about that, Git.   
+    <br>git show v1.0</li>
+    </ul>
 </section>
 
 <section>
-    ￼Tagging
-    • If you want to mark a commit as
-    special:   
-    git tag -a v1.0 -m “Initial launch!” 
-    • Tell me all about that, Git.   
-    git show v1.0
+    <h3>But wait!</h3>
+    <h3>Something’s gone wrong!</h3>
 </section>
 
 <section>
-    ￼But wait! Something’s gone wrong!
+    <h3>Turning back (recent) time</h3>
+    <ul>
+    <li>Say you delete a file: 
+    <br>git rm newfile.txt</li>
+    <li>J/k! Forget everything since my last commit! 
+    <br>git reset --hard</li>
+    <li>Check that all’s well:  git status</li>
+    <li>For individual files: 
+    <br>git checkout yesterday.txt</li>
+    </ul>
 </section>
 
 <section>
-    ￼Turning back (recent) time
-    • Say you delete a file: 
-    git rm newfile.txt
-    • J/k! Forget everything since my last commit! 
-    git reset --hard
-    • Check that all’s well:  git status
-    • For individual files: 
-    git checkout yesterday.txt
+    <h3>Disaster recovery</h3>
+    <ul>
+    <li>>Whathappened?Whendoyouhypothesize was last-known-good? 
+    <br>git log 
+    <br>git blame – who did this?</li>
+    <li>First5charactersofeachlongstringarea commit ID.</li>
+    <li>Toviewchangesbetweensecondandthird commits: 
+    <br>git diff 22222:33333</li>
+    <li>Torevert: 
+    <br>git revert HEAD <- reverts most recent  or: git checkout 22222 filename.txt</li>
+    </ul>
 </section>
 
 <section>
-    ￼Disaster recovery
-    • Whathappened?Whendoyouhypothesize was last-known-good? 
-    git log 
-    git blame – who did this?
-    • First5charactersofeachlongstringarea commit ID.
-    • Toviewchangesbetweensecondandthird commits: 
-    git diff 22222:33333
-    • Torevert: 
-    git revert HEAD <- reverts most recent  or: git checkout 22222 filename.txt
+    <h3>Simple daily workflow</h3>
+    <ul>
+    <li>(git clone)</li>
+    <li>git checkout master</li>
+    <li>git pull
+    <li>git checkout -b issue-branch 
+    <br>Creates and switches you into a branch.</li>
+    <li>git status (as you’re going along)</li>
+    <li>git add [filename]</li>
+    <li>git diff</li>
+    <li>git commit -m “Detailed commit message.”</li>
+    <li>git checkout master</li>
+    <li>git merge issue-branch</li>
+    <li>git push; git branch -d issue-branch</li>
+    </ul>
 </section>
 
 <section>
-    ￼Simple daily workflow
-    • (git clone)
-    • git checkout master
-    • git pull
-    • git checkout -b issue-branch 
-    Creates and switches you into a branch.
-    • git status (as you’re going along)
-    • git add [filename]
-    • git diff
-    • git commit -m “Detailed commit message.”
-    • git checkout master
-    • git merge issue-branch
-    • git push; git branch -d issue-branch
-    ￼http://nakedstartup.com/2010/04/simple-daily-git-workflow/
-    ￼
+    <h3>Git on drupal.org</h3>
+    <ul>
+    <li>>Eachproject(module,theme,etc.)getsits own repository.</li>
+    <li>>Whogetscommitaccess?Project administrator and people to whom they grant permission.</li>
+    <li>If you’reaprojectcreator,followthesteps on the Version Control tab of your project’s page.</li>
+    <li>Thatpagealsoletsanyoneclonethegitrepo. Perfect for making patches.</li>
+    <li>drupal.org/documentation/git</li>
+    </ul>
 </section>
 
 <section>
-    ￼Git on drupal.org
-    • Eachproject(module,theme,etc.)getsits own repository.
-    • Whogetscommitaccess?Project administrator and people to whom they grant permission.
-    • Ifyou’reaprojectcreator,followthesteps on the Version Control tab of your project’s page.
-    • Thatpagealsoletsanyoneclonethegitrepo. Perfect for making patches.
-    • drupal.org/documentation/git
+    <h3>Gittin’ fancy</h3>
+    <ul>
+    <li>gitlog—name-only </li>
+    <li>gitadd-p</li>
+    <li>gitmerge--squash </li>
+    <li>(funwithgitconfig:colordiffingandmore)</li>
+    </ul>
 </section>
 
 <section>
-    ￼Gittin’ fancy • gitlog—name-only 
-    • gitadd-p !
-    • gitmerge--squash 
-    • (funwithgitconfig:colordiffingandmore)
-</section>
-
-<section>
-    ￼Resources
-    • Drupal-specific:drupal.org/documentation/
-    git 
-    Includes GUI recommendations.
-    • gitready.com–greatforquickanswers
-    • gitimmersion.com–beautiful
-    • openhatch.org/missions/git–practice!
-    • try.github.com
-    • git-scm.com
+    <h3>>Resources</h3>
+    <ul>
+    <li>Drupal-specific:drupal.org/documentation/git 
+    <br>Includes GUI recommendations.</li>
+    <li>>gitready.com–greatforquickanswers</li>
+    <li>gitimmersion.com–beautiful</li>
+    <li>openhatch.org/missions/git–practice</li>
+    <li>try.github.com</li>
+    <li>>git-scm.com</li>
+    </ul>
 </section>
 
 <section>
