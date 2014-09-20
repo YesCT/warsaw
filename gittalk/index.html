@@ -284,14 +284,14 @@ not know the answer * Enable folks to continue afterward on their own.
     <br>(No squashing!)</li>
     <li>You can see the commit in the log:
     <br>git log -1 
-    <br>(git log -s)</li>
+    <br>(git log -S)</li>
 </section>
 
 <section>
     <h3>Deleting branches</h3>
     <ul>
-    <li>Delete the ‘snazzytheme’ branch: 
-    <br>git branch -d snazzytheme </li>
+    <li>Delete the snazzytheme branch: 
+    <br>git branch -d 41014-snazzytheme </li>
     <li>You can verify that:
     <br>git branch</li>
     </ul>
@@ -328,12 +328,12 @@ not know the answer * Enable folks to continue afterward on their own.
 <section>
     <h3>Disaster recovery</h3>
     <ul>
-    <li>>What happened? When do you hypothesize was last-known-good? 
+    <li>What happened? When do you hypothesize was last-known-good? 
     <br>git log 
     <br>git blame – who did this?</li>
     <li>First 5 characters of each long string area commit ID.</li>
     <li>To view changes between second and third commits: 
-    <br>git diff 22222:33333</li>
+    <br>git diff 22222..33333</li>
     <li>To revert: 
     <br>git revert HEAD <- reverts most recent  or: git checkout 22222 filename.txt</li>
     </ul>
@@ -344,7 +344,7 @@ not know the answer * Enable folks to continue afterward on their own.
     <ul>
     <li>(git clone)</li>
     <li>git checkout master</li>
-    <li>git pull
+    <li>git pull --rebase
     <li>git checkout -b issue-branch 
     <br>Creates and switches you into a branch.</li>
     <li>git status (as you’re going along)</li>
@@ -362,8 +362,8 @@ not know the answer * Enable folks to continue afterward on their own.
     <ul>
     <li>>Each project(module,theme,etc.) gets its own repository.</li>
     <li>>Who gets commit access? Project administrator and people to whom they grant permission.</li>
-    <li>If you’reaproject creator,follow thesteps on the Version Control tab of your project’s page.</li>
-    <li>That page also lets anyone clone the gitrepo. Perfect for making patches.</li>
+    <li>If you’re a project creator,follow the steps on the Version Control tab of your project’s page.</li>
+    <li>That page also lets anyone clone the git repo. Perfect for making patches.</li>
     <li>drupal.org/documentation/git</li>
     </ul>
 </section>
