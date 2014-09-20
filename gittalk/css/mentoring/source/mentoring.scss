@@ -1,0 +1,19 @@
+/**
+ * Drupal core mentoring theme for reveal.js.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+@import "../template/fonts";
+// ---------------------------------------------
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(247,242,211,1), rgba(255,255,255,1) );
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------

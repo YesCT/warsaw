@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Crazy Happy</title>
+
+    <meta name="description"
+          content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"/>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/mentoring/source/mentoring.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body style="background:black;">
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<!-- proposal
+One of the more daunting things we encounter in open source development is
+getting enough people to regularly contribute. To be sustainable, we need to
+encourage new contributors to participate. To that end, we seek to engage new
+contributors and experienced developers alike to participate in mentoring.
+Mentoring provides participants with direction and encouragement to help them
+find their way. This session is for anyone who would like to learn more about
+the Drupal mentoring program, mentoring in open source in general, how to mentor
+new contributors, or how to organize their own sprints. We will cover tools
+available to mentors, documentation, and practical techniques for mentoring
+newcomers. We will include strategies for how to: * Make sure people feel
+welcome * Match tasks to participants * Keep people engaged even when they
+struggle * Help without being overbearing * Answer questions even if you do
+not know the answer * Enable folks to continue afterward on their own.
+-->
+
+<section>
+    <h3>tinyurl.com/mentoringNYCCamp</h3>
+    <br/>
+    <h3>Community Building with Mentoring:</h3>
+    <br/>
+
+    <h3>Mentoring the Mentors</h3>
+    <aside class="notes">
+        <p>This session is for those curious about how people get involved and
+            stay involved
+        </p>
+
+    </aside>
+</section>
+
+    <section>
+        <h2>@YesCT</h2>
+        <h3>
+
+        <p>Cathy Theys </p>
+
+        <p>Cheppers, Breakthrough Technologies, Gittip</p>
+        </h3>
+        <aside class="notes">
+            <p>I'm Cathy Theys, YesCT in the drupal community and on twitter.
+            <p>My job is...
+            <br>I've been around Drupal for almost 8 years.
+            <br>Initially, I did...
+            <br>Drupal has a active mentoring program that started in... 2011 (https://groups.drupal.org/node/164629)
+            <br>A mentor is...
+            <br>In the past two years I've become a mentor, learning from other
+                experienced mentors. I've also organized a bunch of sprints,
+                ranging in size from 5 people to 600 people.
+                I here at dev days because I enjoy working in person with people
+                I normally only work with in the issue queues and irc,
+                to meet new people and be moved by their own drupal stories,
+                and to learn.
+                Talking with people attending the sprints and the session days
+                so far, some of you are here to learn about drupal 8,
+                some to sprint, some will benefit when they go home with
+                skills and knowledge learned here. Some will go home and
+                stir up their local communities with meetups, camps and community
+                they grow.
+                You might go home and implement one small idea,
+                and might help your local community grow.
+            </p>
+
+        </aside>
+    </section>
+
+<section>
+<!-- This is the "problem slide". Why should people pay attention to this talk? -->
+    <h2>
+        Scale
+    </h2>
+    <aside class="notes">
+        Open source, Drupal, has a lot of issues. There are many bugs, improvements
+        no shortage of things to do.
+        <br>how do we get more people to contribute,
+        <br>how do we scale and make the project sustainable
+        <br>what makes people become *regular* contributors?
+    </aside>
+</section>
+
+<section>
+    <h2>Who is a possible new participant?
+    </h2>
+    <h3>How can the community help people become participants?</h3>
+    <aside class="notes">
+        <br>first step is person -> participant.
+
+        <ul>
+            <li>person</li>
+            <li>participant</li>
+            <li>habitual participant</li>
+            <li>mentor</li>
+            <li>habitual mentor</li>
+            <li>mentor of mentors</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h3>
+    <ul>
+    <li>every new person</li>
+    <li>inclusive</li>
+    <li>experienced contributors do promoting</li>
+    </ul>
+    </h3>
+    <aside class="notes">
+        <p>How can the community help people become participants?</p>
+        <br>every new person is a potential contributor and possible eventual mentor of mentors.
+        <p>no assumptions? assume (heh) good intentions?
+            <br>redefining contributor, participant, using language that is inclusive,
+            watch gender language, skill language, and examples that are held up.
+            <br>skill language, not just coding.
+            <br>people with usability and accessiblity skills can improve the tools used to contribute,
+            <br>issue opening,
+            <br>people to triage issues to show they are reproducable, testers,
+            documentors, project managers, fundraisers, community event organizers,
+            photographers, artists, dev ops, infrastructure, performance or security specialists,
+            first time users make great dx testers, people from other projects can provide perspective
+            or identify integration issues
+            <br>so when we talk about contribution, we can leave the door open for more people
+            when we use inclusive language.
+            <p>Something else the community can do<br>
+            is for active contributors about
+            the benefits of sending people to contact mentors and attend mentoring events,
+            online or in person.
+            <p>changes inside the community can make it more likely new people
+            will become participants with a mindset that ever new person
+            is a potential contributor,
+            <br>using inclusive languages and examples of participation
+            <br>having active participants know what to do with new people
+            <br>which might be send them to mentors.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Outreach</h2>
+    <h3>Repeat information</h3>
+    <h3>Repeat opportunities</h3>
+    <aside class="notes">
+        <ul>
+            <li>Make Announcements</li>
+            <li>get other high profile people to recommend and remind about
+                opportunities to participate,
+            </li>
+            <li>blog about the benefits</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <img src="images/sprintslide.png">
+    <aside class="notes">
+        slides for presenters at events
+    </aside>
+</section>
+<section>
+    <h2>announce opportunities to participate</h2>
+    <img src="images/ama.png">
+    <img src="images/webchickquote.png">
+    <aside class="notes">
+        sneak it in.
+    </aside>
+</section>
+<section>
+    <img src="images/tidbit.png">
+    <aside class="notes">
+        sneak it in.
+        <br>this blog, has one small mention of a
+        way to participate
+    </aside>
+</section>
+<section>
+    <img src="images/discuss.png">
+    <aside class="notes">
+        of an easy
+        way to participate:
+        <br>not code up solution to difficult architectual problem
+        <br>"discuss"
+    </aside>
+</section>
+<section>
+    <img src="images/tweets.png">
+    <aside class="notes">
+        doesn't have to be a blog, tweets are good.
+        <br>doesn't just have to be you, ask others to make announcements also
+    </aside>
+</section>
+<section>
+    <img src="images/repeat.png">
+    <aside class="notes">
+        repeat oppurtunities.
+    </aside>
+</section>
+<section>
+    <img src="images/repeatlocal.png">
+    <aside class="notes">
+        hold local events, repeatedly
+    </aside>
+</section>
+<section>
+    <h2>How do we get a participant to return?</h2>
+    <aside class="notes">
+        <p>It's important that participants return because...</p>
+        <p>We will do that by...</p>
+    </aside>
+</section>
+<section>
+    <h3><ul>
+    <li>welcome</li>
+    <li>match tasks</li>
+    <li>ensure success</li>
+    </ul></h3>
+    <aside class="notes">
+        <ul>
+            <li>make sure people feel welcome</li>
+            <li>match tasks to participants</li>
+            <li>ensure they are successful the first time</li>
+        </ul>
+    </aside>
+</section>
+<section>
+        <h2>What do mentors do?</h2>
+    <img src="images/whatdo.jpg" alt="one on one helping, listening, photo by Amazee Labs" >
+    <aside class="notes">
+        <p>How do mentors do this?</p>
+        <ul>
+            <li>Make sure people feel welcome</li>
+            <li>say hi in irc, hi is an easy first interaction</li>
+            <li>match tasks to participants, by finding out about the participant...</li>
+            <li>ensure they are successful the first time, with a well matched task
+            <br>and a very simple first task</li>
+            <li>keep people engaged even when they struggle
+            <br>by waiting a bit, then ask how things are going,
+            <br>share with participants that it can be tough the first time</li>
+            <li>help without being overbearing
+            <br>for example, 10 second rule</li>
+            <li>enable folks to continue afterward on their own
+            <br>by sharing the resource that has the answer, not just the answer.
+            <br>share examples of similar things that have been done
+            <br>share how to find the resource or example</li>
+        </ul>
+    </aside>
+</section>
+<section>
+        <h2>Answer questions they don’t know the answer to</h2>
+    <aside class="notes">
+        <ul>
+            <li>say I dont know</li>
+            <li>lets find out together</li>
+            <li>this is how I would find out, start by...</li>
+            <li>I would ask …</li>
+        </ul>
+        Participants feel like they dont know anything. This Lets participants
+        see experienced people who also do not know things. But that they
+        know how to find out things.
+    </aside>
+</section>
+<section>
+    <h2>In public</h2>
+    <aside class="notes">
+        Where should we do that? In public.
+        <p>expose everyone to bits of the mentoring process:
+            <br>mentor in public, in individual issues, in a public channel in irc, or in a room where
+            people can overhear interactions between mentors and participants.
+            seeing how mentors mentor is like training future mentors,
+            <br>anyone who sees how mentors mentor will pick up parts of the mentoring habits.
+    </aside>
+</section>
+<section>
+    <h2>Where do mentors come from?</h2>
+    <h3>Engage new contributors and experienced contributors
+    <aside class="notes">
+        <br>matching tasks, picking simple ones, answering questions we dont know
+        and sharing how we find out is how mentors can help bring in people to participate,
+        <br>and become repeat participants.
+        <br>But where do the mentors come from?
+        <br>This is one of the keys to mentoring in public.
+        <p>Engage new contributors and experienced contributors
+            <br>alike to participate in mentoring</p>
+        <br>Experienced contributors will see the mentor interactions
+        and reuse those patterns themselves when helping people.
+        <br>They can also see what mentors really do, and will see they
+        can be a mentor. (Dont have to know answers to all the questions,
+        only share how to find answers.)
+        <br>Ask in advance for mentors, explain the "qualifications"
+        (minimal qualifications and there will be support for mentors).
+        Explain the expectations...
+        <br>Ask in a pinch. If someone has done a task a few times,
+        and a new person wants help doing it, ask that experienced person to help.
+        Now they are a mentor.
+    </aside>
+</section>
+<section>
+    <h2>Support mentors</h2>
+    <img src="images/mentormentors.jpg" alt="mentor mentoring a mentor, photo by Amazee Labs" >
+    <aside class="notes">
+        <p>instead of doing this for tasks the participants do,
+        do it for the mentors</p>
+        <ul>
+            <li>continue to be a resource</li>
+            <li>be available for questions</li>
+            <li>participate side by side</li>
+            <li>letting new people make mistakes (10 second rule)</li>
+            <li>offering specific suggestions to improve</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Empower mentors</h2>
+    <img src="images/mentorsprep.jpg" alt="mentors meeting around table, photo by Josef Dabernig">
+    <aside class="notes">
+        <p>mentors will have ideas of how to improve mentor experience. let them.
+        <ul>
+            <li>document repetitive things mentors explain
+            <br>this makes a mentor memory so new mentors know what other mentors have figured out
+            <br>and can be shared directly with participants so they dont have to ask mentors
+            <br>Contributor Task Documents.</li>
+        </ul>
+        <p>Ask mentors what they would change.</p>
+        <p>Those things can happen in the issue queues asynchronisly,
+        real time, online for example in irc,
+        or in person at events</p>
+    </aside>
+</section>
+<section>
+    <h2>Sprints</h2>
+</section>
+<section>
+    <img src="images/sprintprague.jpg" alt="prague extended sprint. photo by YesCT">
+    <aside class="notes">
+        Sprints are usually in person focused events,
+        with realtime interactions, lasting all day.
+        Sometimes people participate remotely (drupal uses irc often for remote interactions).
+    </aside>
+</section>
+<section>
+    <h2>Mentors at Sprints</h2>
+    <img src="images/workingtogether.jpg" alt="one on one, photo by Amazee Labs" >
+    <aside class="notes">
+        small sprints, usually the organizer functions as a mentor.
+        <br>Estimate the number of mentors: 1 for every 8 participants.
+    </aside>
+</section>
+<section>
+    <h2>Where do mentors come from?</h2>
+    <aside class="notes">
+        <p>in a pinch</p>
+    </aside>
+</section>
+<section>
+    <img src="images/wherementors.jpg" >
+    <aside class="notes">
+        <p>sign ups</p>
+        <p>For large sprints, at conferences, sign up form.</p>
+        <p>booth</p>
+        <p>summary: organizer, 1:8, pinch, signups</p>
+    </aside>
+</section>
+<section>
+    <h2>Sprint Preparation</h2>
+    <img src="images/taskprep.jpg" alt="mentors smiling during task prep, photo by YesCT" >
+    <aside class="notes">
+        Space needs. Conversation room for 6-10 people, schedule signup sheet outsite.
+        Quiet room, experienced people, heads down working.
+        New person area. Signs, direct people. Identify the tables.
+        <p>Task lists. Tools: drupal has a special mentoring site used to
+        track tasks (split up small parts of larger issues in our main issue tracker).
+        <br>Working to change the issue tracker to enable that funcationality there.
+        <br>google spreadsheet, especially for small events
+        <br>Data: issue number, task, task difficulty level, skills needed, participant, mentor, status: wip, needs review, done</p>
+        <br>diverse set of task types, easy, med, difficult.
+        <br>have tasks for those with a local dev env set up, those without.
+        <br>document what tools people should have installed before, with
+        references to other help docs how to set them up.
+        <br>provide help getting them set up (let people know there will be help)
+        <p>Wifi, outlet strips, Food. Coffee. tables.</p>
+    </aside>
+</section>
+<section>
+    <h2>Recognition of new Participants</h2>
+    <img src="images/firstju1iet.jpg" alt="first time core commit credit commit, photo by YesCT" >
+    <aside class="notes">
+        <br>we know getting people to be return participants is important.
+        <br>one on one. mentors as the day progresses can restate what they see
+        people have accomplished. it can be frustrating at times, this will
+        encourage people to continue at home and attend mentoring or a sprint again.
+        <p>Count the number of people at the sprint.
+        Take pictures.
+        Publish!
+        <br>Identify tasks that can result in a first time something.
+        <br>first time commit
+        <p>have the project maintainer/owner do a live commit
+        <br>have the first time patch producer (what are these called in symfony land?)
+        on stage with project owner.</p>
+    </aside>
+</section>
+<section>
+    <h2>Mentor recognition</h2>
+    <img src="images/recognitionkeynote.jpg" alt="dries recognizing mentors in prague keynote, photo by Scor" >
+    <aside class="notes">
+        Mentor dinner the night after a big sprint is nice.
+        <br>Tweets thanking new mentors after the event.
+        <br>keep track of who has mentored, count, publish a list
+    </aside>
+</section>
+<section>
+    <img src="images/icecream.jpg" alt="icecream, photo by YesCT" >
+    <aside class="notes">
+        more live recognition, or more short term showing of appreciation
+    </aside>
+</section>
+<section>
+    <img src="images/chocolate.jpg" alt="chocolate, photo by YesCT" >
+</section>
+<section>
+    <h2>Long-term recognition</h2>
+    <aside class="notes">
+        review! review the work people submit.
+        <br>keep track of the people who have participated. publish.
+        <br>be inclusive, think about more than code commit credits:
+        <br>reviews, comments
+        <br>there can be a list of "team" members published that
+        includes those whose contributions are (easy to measure) *and* difficult to measure.
+    </aside>
+</section>
+<section>
+    <img src="images/fun.jpg" alt="d.o review party, photo by josefjer" >
+    <aside class="notes">
+        another thing effecting participation long term is fun.
+        <br>tell story.
+    </aside>
+</section>
+<section>
+    <h2>Benefits</h2>
+    <aside class="notes">
+        community: grows
+        <br>participants: make personal connections, attain goals, build skills
+        <br>mentors: same, mentoring is definitely skill building
+        <br>story of how I build my skills and what doors mentoring opens for me.
+    </aside>
+</section>
+<section>
+    <h2>It's the people, people</h2>
+    <aside class="notes">
+        community, what gets people in and coming back?
+        it’s the people.
+        <br>having lots of oppurtunities to get involved, repeatedly announcing them,
+        <br>valuing new participants
+        <br>measuring and publishing participation
+        <br>reviewing, reviewing in a way that builds the skills of new people
+        <br>making personal
+        connections, shared experiences of trouble and success, fun,
+        <br>it being so rewarding they participants and mentors want to do it again and again
+        <p>these things keep people coming back
+    </aside>
+</section>
+<section>
+    <h3>Resources</h3>
+    <h3><ul>
+    <li>tinyurl.com/mentoringNYCCamp</li>
+    <li>drupal.org/core-mentoring</li>
+    <li>drupalmentoring.org/mentor-instructions</li>
+    <li>drupal.org/new-contributors</li>
+    </ul>
+    </h3>
+</section>
+<section>
+    <h3>Action</h3>
+    <h4><ul>
+        <li>Sneak in announcing an oppurtunity to contribute</li>
+        <li>Expose your reasoning</li>
+        <li>Sprint!</li>
+    </ul></h4>
+
+</section>
+<section>
+    <h3>Give feedback please</h3>
+    <h3>Questions?</h3>
+    <br/>
+    <h4>@YesCT</h4>
+    <h4>yesct.net</h4>
+</section>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+</body>
+</html>
